@@ -32,7 +32,7 @@ import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
-import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
+import { GoHome, GoPerson, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
@@ -304,7 +304,7 @@ export const navLinks = [
   { de: "Skills", en: "Skills", hash: "#skills", icon: GoStack },
   { de: "Projekte", en: "Projects", hash: "#projects", icon: GoProject },
   { de: "Über mich", en: "About me", hash: "#about-me", icon: GoPerson },
-  { de: "Kontakt", en: "Contact", hash: "#contact", icon: GoMail },
+  // { de: "Kontakt", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
 
 export const FooterLinks = [
@@ -396,14 +396,7 @@ export const aboutMeData = {
 };
 
 export const contactData = {
-  title: {
-    de: "Kontakt",
-    en: "Contact",
-  },
-  description: {
-    de: "Schreib mir eine Nachricht und ich melde mich bei dir.",
-    en: "Write me a message and I will get back to you.",
-  },
+ 
   inputfields: [
     {
       name: "name",
