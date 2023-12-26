@@ -3,7 +3,7 @@ import Button from "./Button";
 // import axios from "axios";
 import { Highlight, themes } from "prism-react-renderer";
 import { contactData,  } from "../assets/lib/data.tsx";
-import { useSectionInView } from "../assets/lib/hooks";
+
 import { useLanguage } from "../context/language-context";
 import { ToastContainer,  } from "react-toastify";
 import { useTheme } from "../context/theme-context";
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
   const [message, setMessage] = useState<string>("");
   const [cursor, setCursor] = useState<string>("");
   const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null);
-  const { ref } = useSectionInView("Contact");
+  // const { ref } = useSectionInView("Contact");
   const { language } = useLanguage();
   const { theme } = useTheme();
 
@@ -182,7 +182,7 @@ import  { useState } from "react";
       >
         <div
           className="title-container flex flex-col gap-6 justify-center items-center py-16  max-lg:p-16"
-          ref={ref}
+      
         >
           <motion.div
             ref={animationReference}
@@ -192,17 +192,8 @@ import  { useState } from "react";
               textAlign: "center",
             }}
           >
-            <p className="text-[--black] mb-6">
-              <span className="text-[--orange]">&lt;</span>
-              {language === "DE" ? contactData.title.de : contactData.title.en}
-              <span className="text-[--orange]">/&gt;</span>
-            </p>
+           
 
-            <h2 className="text-[--black] text-center">
-              {language === "DE"
-                ? contactData.description.de
-                : contactData.description.en}
-            </h2>
           </motion.div>
         </div>
         <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
